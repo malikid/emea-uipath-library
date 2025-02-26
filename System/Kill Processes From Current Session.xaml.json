@@ -1,0 +1,37 @@
+{
+  "DisplayName": "KillProcessesFromCurrentSession",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_processNamesToKill",
+      "DisplayName": "in_processNamesToKill",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_isEnabled",
+      "DisplayName": "in_isEnabled",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_shouldContinueOnError",
+      "DisplayName": "in_shouldContinueOnError",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}
