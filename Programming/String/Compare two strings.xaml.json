@@ -1,0 +1,46 @@
+{
+  "DisplayName": "Compare two strings",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_str_stringToCompare1",
+      "DisplayName": "in_str_stringToCompare1",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_stringToCompare2",
+      "DisplayName": "in_str_stringToCompare2",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_isCaseSensitive",
+      "DisplayName": "in_isCaseSensitive",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "out_isTheSame",
+      "DisplayName": "out_isTheSame",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}
