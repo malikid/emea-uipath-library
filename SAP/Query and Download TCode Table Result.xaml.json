@@ -1,0 +1,136 @@
+{
+  "DisplayName": "Query and Download TCode Table Result",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_str_sapAppPath",
+      "DisplayName": "in_str_sapAppPath",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_sapConnectionName",
+      "DisplayName": "in_str_sapConnectionName",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_sapClientName",
+      "DisplayName": "in_str_sapClientName",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_tCodeQueryVBSFilePath",
+      "DisplayName": "in_str_tCodeQueryVBSFilePath",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_tCodeDownloadVBSFilePath",
+      "DisplayName": "in_str_tCodeDownloadVBSFilePath",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_tCodeName",
+      "DisplayName": "in_str_tCodeName",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_tempFolderPath",
+      "DisplayName": "in_str_tempFolderPath",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_errorFolderPath",
+      "DisplayName": "in_str_errorFolderPath",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_bool_continueOnError",
+      "DisplayName": "in_bool_continueOnError",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_list_tCodeQueryArguments",
+      "DisplayName": "in_list_tCodeQueryArguments",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_list_tCodeDownloadArguments",
+      "DisplayName": "in_list_tCodeDownloadArguments",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_errorMessageForNoData",
+      "DisplayName": "in_str_errorMessageForNoData",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_errorMessageForDownloadFailed",
+      "DisplayName": "in_str_errorMessageForDownloadFailed",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_errorMessageForSAPLoginFailed",
+      "DisplayName": "in_str_errorMessageForSAPLoginFailed",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}
