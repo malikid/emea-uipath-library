@@ -1,0 +1,28 @@
+{
+  "DisplayName": "Invoke VBScript with Dictionary argument",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_list_inputArguments",
+      "DisplayName": "in_list_inputArguments",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_str_vbScriptPath",
+      "DisplayName": "in_str_vbScriptPath",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}
