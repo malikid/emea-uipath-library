@@ -61,15 +61,6 @@
       "IsPrincipal": true
     },
     {
-      "Name": "in_str_tempFolderPath",
-      "DisplayName": "in_str_tempFolderPath",
-      "Category": null,
-      "Tooltip": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true
-    },
-    {
       "Name": "in_str_errorFolderPath",
       "DisplayName": "in_str_errorFolderPath",
       "Category": null,

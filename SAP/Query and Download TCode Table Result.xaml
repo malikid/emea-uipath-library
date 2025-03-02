@@ -6,7 +6,6 @@
     <x:Property Name="in_str_tCodeQueryVBSFilePath" Type="InArgument(x:String)" />
     <x:Property Name="in_str_tCodeDownloadVBSFilePath" Type="InArgument(x:String)" />
     <x:Property Name="in_str_tCodeName" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_tempFolderPath" Type="InArgument(x:String)" />
     <x:Property Name="in_str_errorFolderPath" Type="InArgument(x:String)" />
     <x:Property Name="in_bool_continueOnError" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_list_tCodeQueryArguments" Type="InArgument(scg:List(x:String))" />
@@ -30,12 +29,10 @@
   <this:Query_and_Download_TCode_Table_Result.in_str_tCodeDownloadVBSFilePath>
     <InArgument x:TypeArguments="x:String" />
   </this:Query_and_Download_TCode_Table_Result.in_str_tCodeDownloadVBSFilePath>
-  <this:Query_and_Download_TCode_Table_Result.in_str_tempFolderPath>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Query_and_Download_TCode_Table_Result.in_str_tempFolderPath>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
   <sap:VirtualizedContainerService.HintSize>954.8571428571429,1011.4285714285716</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Query_and_Download_TCode_Table_Result_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -199,11 +196,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">199.99999999999997,504.28571428571433</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51.42857142857143</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,555.7142857142858 300,585.7142857142858 300.64166666666665,585.7142857142858 300.64166666666665,606.52</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,556.8571428571429 300,586.8571428571429 300.64166666666665,586.8571428571429 300.64166666666665,606.52</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[in_str_tCodeName + &quot;: &quot; + in_str_errorMessageForDownloadFailed]">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[in_str_tCodeName + &quot;: &quot; + in_str_errorMessageForDownloadFailed]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,11 +212,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">200.64166666666665,606.52</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51.42857142857143</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300.64166666666665,657.9485714285714 300.64166666666665,707.9485714285714</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">300.64166666666665,659.0914285714285 300.64166666666665,707.9485714285714</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="[in_str_tCodeName + &quot;_screenshot.png&quot;]" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="200,51.42857142857143" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" Version="V1">
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="[in_str_tCodeName + &quot;_screenshot.png&quot;]" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" Version="V1">
                         <uix:NTakeScreenshot.SavedTo>
                           <OutArgument x:TypeArguments="x:String">[in_str_errorFolderPath]</OutArgument>
                         </uix:NTakeScreenshot.SavedTo>
