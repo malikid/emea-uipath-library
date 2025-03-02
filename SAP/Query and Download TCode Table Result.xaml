@@ -111,6 +111,10 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>EMEA Library</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Query_and_Download_TCode_Table_Result" sap:VirtualizedContainerService.HintSize="964.5714285714286,946.2857142857143" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -300,7 +304,7 @@
           <av:PointCollection x:Key="ConnectorLocation">490,197.07142857142856 490,227.07142857142856 490.0702380952381,227.07142857142856 490.0702380952381,247.07142857142856</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Log in SAP and Client" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Log in SAP and Client" sap:VirtualizedContainerService.HintSize="376.57142857142856,301.14285714285717" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="str_isLoggedInToSapClient" />
         </Sequence.Variables>
@@ -309,7 +313,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="SAP Logon\SAP Connection.vbs" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
+        <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[Path.Combine(Environment.CurrentDirectory, &quot;EMEA Library&quot;, &quot;SAP&quot;, &quot;SAP Logon\SAP Connection.vbs&quot;)]" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
           <ui:InvokeVBScript.Arguments>
             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
               <InArgument x:TypeArguments="x:String">LogInKeep</InArgument>
