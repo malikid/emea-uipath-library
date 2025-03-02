@@ -313,7 +313,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[Path.Combine(Environment.CurrentDirectory, &quot;EMEA Library&quot;, &quot;SAP&quot;, &quot;SAP Logon\SAP Connection.vbs&quot;)]" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
+        <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[Path.Combine(Environment.CurrentDirectory, &quot;SAP&quot;, &quot;SAP Logon\SAP Connection.vbs&quot;)]" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
           <ui:InvokeVBScript.Arguments>
             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
               <InArgument x:TypeArguments="x:String">LogInKeep</InArgument>
