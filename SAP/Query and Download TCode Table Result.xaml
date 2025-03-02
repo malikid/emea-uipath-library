@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Query_and_Download_TCode_Table_Result" this:Query_and_Download_TCode_Table_Result.in_bool_continueOnError="True" this:Query_and_Download_TCode_Table_Result.in_list_tCodeQueryArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_list_tCodeDownloadArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForNoData="No data" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForDownloadFailed="Download failed" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForSAPLoginFailed="SAP login failed" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Query_and_Download_TCode_Table_Result" this:Query_and_Download_TCode_Table_Result.in_str_sapAppPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplgpad.exe" this:Query_and_Download_TCode_Table_Result.in_bool_continueOnError="True" this:Query_and_Download_TCode_Table_Result.in_list_tCodeQueryArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_list_tCodeDownloadArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForNoData="No data" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForDownloadFailed="Download failed" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForSAPLoginFailed="SAP login failed" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_str_sapAppPath" Type="InArgument(x:String)" />
     <x:Property Name="in_str_sapConnectionName" Type="InArgument(x:String)" />
@@ -14,21 +14,6 @@
     <x:Property Name="in_str_errorMessageForDownloadFailed" Type="InArgument(x:String)" />
     <x:Property Name="in_str_errorMessageForSAPLoginFailed" Type="InArgument(x:String)" />
   </x:Members>
-  <this:Query_and_Download_TCode_Table_Result.in_str_sapAppPath>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Query_and_Download_TCode_Table_Result.in_str_sapAppPath>
-  <this:Query_and_Download_TCode_Table_Result.in_str_sapConnectionName>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Query_and_Download_TCode_Table_Result.in_str_sapConnectionName>
-  <this:Query_and_Download_TCode_Table_Result.in_str_sapClientName>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Query_and_Download_TCode_Table_Result.in_str_sapClientName>
-  <this:Query_and_Download_TCode_Table_Result.in_str_tCodeQueryVBSFilePath>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Query_and_Download_TCode_Table_Result.in_str_tCodeQueryVBSFilePath>
-  <this:Query_and_Download_TCode_Table_Result.in_str_tCodeDownloadVBSFilePath>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Query_and_Download_TCode_Table_Result.in_str_tCodeDownloadVBSFilePath>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -154,7 +139,7 @@
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,516.5714285714286" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,787.4285714285714" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="in_str_tCodeDownloadVBSFilePath" />
               <Variable x:TypeArguments="x:String" Name="str_downloadFolderPath" />
@@ -165,6 +150,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[in_str_tCodeName + &quot;: Download Tcode Data as Spreadsheet start&quot;]" />
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Invoke VBScript with Dictionary argument workflow" sap:VirtualizedContainerService.HintSize="379.42857142857144,113.71428571428571" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="UiPath\Invoke VBScript with Dictionary argument.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_inputArguments">
@@ -175,15 +161,16 @@
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageText="[str_sapStatus]">
+            <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageText="[str_sapStatus]">
               <ucas:ReadStatusbar.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8f244ab6632f434a524ed0a477bd5eeb" Selector="&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ucas:ReadStatusbar.Target>
             </ucas:ReadStatusbar>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[in_str_tCodeName + &quot;: Download Tcode Data as Spreadsheet completed&quot;]" />
           </Sequence>
           <FlowStep.Next>
             <FlowDecision x:Name="__ReferenceID2" Condition="[str_sapStatus.toLower.Contains(&quot;tranferred&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
@@ -304,7 +291,7 @@
           <av:PointCollection x:Key="ConnectorLocation">490,197.07142857142856 490,227.07142857142856 490.0702380952381,227.07142857142856 490.0702380952381,247.07142857142856</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Log in SAP and Client" sap:VirtualizedContainerService.HintSize="376.57142857142856,301.14285714285717" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Log in SAP and Client" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="str_isLoggedInToSapClient" />
         </Sequence.Variables>
@@ -313,13 +300,22 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client start&quot;]" />
         <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[Path.Combine(Environment.CurrentDirectory, &quot;SAP&quot;, &quot;SAP Logon\SAP Connection.vbs&quot;)]" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
           <ui:InvokeVBScript.Arguments>
             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
-              <InArgument x:TypeArguments="x:String">LogInKeep</InArgument>
-              <InArgument x:TypeArguments="x:String">[in_str_sapAppPath.Replace(" ", "!")]</InArgument>
-              <InArgument x:TypeArguments="x:String">[in_str_sapConnectionName.Replace(" ", "!")]</InArgument>
-              <InArgument x:TypeArguments="x:String">[in_str_sapClientName]</InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String">LogInKeep</Literal>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_sapAppPath.Replace(&quot; &quot;, &quot;!&quot;)" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_sapConnectionName.Replace(&quot; &quot;, &quot;!&quot;)" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_sapClientName" />
+              </InArgument>
             </scg:List>
           </ui:InvokeVBScript.Arguments>
         </ui:InvokeVBScript>
@@ -331,6 +327,7 @@
             <InArgument x:TypeArguments="x:Boolean">[If(str_isLoggedInToSapClient.Contains("True", StringComparison.InvariantCultureIgnoreCase), True, False)]</InArgument>
           </Assign.Value>
         </Assign>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client completed&quot;]" />
       </Sequence>
       <FlowStep.Next>
         <FlowDecision x:Name="__ReferenceID6" Condition="[bool_isLoggedInToSapClient]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
@@ -358,6 +355,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[in_str_tCodeName + &quot;: Query TCode Data start&quot;]" />
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Invoke VBScript with Dictionary argument workflow" sap:VirtualizedContainerService.HintSize="379.42857142857144,113.71428571428571" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UiPath\Invoke VBScript with Dictionary argument.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_inputArguments">
@@ -368,15 +366,16 @@
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_sapStatus]">
+                <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_sapStatus]">
                   <ucas:ReadStatusbar.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8f244ab6632f434a524ed0a477bd5eeb" Selector="&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
                     </ui:Target>
                   </ucas:ReadStatusbar.Target>
                 </ucas:ReadStatusbar>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[in_str_tCodeName + &quot;: Query TCode Data completed&quot;]" />
               </Sequence>
               <FlowStep.Next>
                 <x:Reference>__ReferenceID5</x:Reference>
