@@ -52,6 +52,7 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>EMEA_Library.UiPath</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,6 +101,7 @@
       <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Query_and_Download_TCode_Table_Result" sap:VirtualizedContainerService.HintSize="964.5714285714286,946.2857142857143" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -140,11 +142,6 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,787.4285714285714" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="in_str_tCodeDownloadVBSFilePath" />
-              <Variable x:TypeArguments="x:String" Name="str_downloadFolderPath" />
-              <Variable x:TypeArguments="x:String" Name="str_downloadFileName" />
-            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -153,12 +150,8 @@
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[in_str_tCodeName + &quot;: Download Tcode Data as Spreadsheet start&quot;]" />
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Invoke VBScript with Dictionary argument workflow" sap:VirtualizedContainerService.HintSize="379.42857142857144,113.71428571428571" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="UiPath\Invoke VBScript with Dictionary argument.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_inputArguments">
-                  <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_list_tCodeDownloadArguments" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_vbScriptPath">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_tCodeDownloadVBSFilePath" />
-                </InArgument>
+                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_inputArguments">[in_list_tCodeDownloadArguments]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_vbScriptPath">[in_str_tCodeDownloadVBSFilePath]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageText="[str_sapStatus]">
@@ -218,10 +211,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NTakeScreenshot>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID0" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-                          <FlowDecision.Condition>
-                            <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_bool_continueOnError" />
-                          </FlowDecision.Condition>
+                        <FlowDecision x:Name="__ReferenceID0" Condition="[in_bool_continueOnError]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -300,34 +290,45 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client start&quot;]" />
-        <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[Path.Combine(Environment.CurrentDirectory, &quot;SAP&quot;, &quot;SAP Logon\SAP Connection.vbs&quot;)]" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
-          <ui:InvokeVBScript.Arguments>
-            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String">LogInKeep</Literal>
-              </InArgument>
-              <InArgument x:TypeArguments="x:String">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_sapAppPath.Replace(&quot; &quot;, &quot;!&quot;)" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_sapConnectionName.Replace(&quot; &quot;, &quot;!&quot;)" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_sapClientName" />
-              </InArgument>
-            </scg:List>
-          </ui:InvokeVBScript.Arguments>
-        </ui:InvokeVBScript>
-        <Assign sap:VirtualizedContainerService.HintSize="334.2857142857143,61.142857142857146" sap2010:WorkflowViewState.IdRef="Assign_1">
-          <Assign.To>
-            <OutArgument x:TypeArguments="x:Boolean">[bool_isLoggedInToSapClient]</OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="x:Boolean">[If(str_isLoggedInToSapClient.Contains("True", StringComparison.InvariantCultureIgnoreCase), True, False)]</InArgument>
-          </Assign.Value>
-        </Assign>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client completed&quot;]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client start&quot;]" />
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: SAP Logon Pad 740" sap:VirtualizedContainerService.HintSize="434.2857142857143,599.4285714285714" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="04bcbde7-ed52-4a8a-9e47-a730032f9092" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376.57142857142856,302.2857142857143" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName="[Path.Combine(Environment.CurrentDirectory, &quot;SAP&quot;, &quot;SAP Logon\SAP Connection.vbs&quot;)]" sap:VirtualizedContainerService.HintSize="334.2857142857143,108.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[str_isLoggedInToSapClient]" WaitForOutput="True">
+                  <ui:InvokeVBScript.Arguments>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
+                      <InArgument x:TypeArguments="x:String">LogInKeep</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_str_sapAppPath.Replace(" ", "!")]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_str_sapConnectionName.Replace(" ", "!")]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_str_sapClientName]</InArgument>
+                    </scg:List>
+                  </ui:InvokeVBScript.Arguments>
+                </ui:InvokeVBScript>
+                <Assign sap:VirtualizedContainerService.HintSize="334.2857142857143,61.142857142857146" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[bool_isLoggedInToSapClient]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">[If(str_isLoggedInToSapClient.Contains("True", StringComparison.InvariantCultureIgnoreCase), True, False)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="110, 26, 1740, 995" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplgpad.exe" IconBase64="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" InformativeScreenshot="a5911b4077b47ed1cd47b5f176b5b78a.png" Selector="&lt;wnd app='saplgpad.exe' cls='#32770' title='SAP Logon Pad 740' /&gt;" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client completed&quot;]" />
       </Sequence>
       <FlowStep.Next>
         <FlowDecision x:Name="__ReferenceID6" Condition="[bool_isLoggedInToSapClient]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
@@ -358,12 +359,8 @@
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[in_str_tCodeName + &quot;: Query TCode Data start&quot;]" />
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Invoke VBScript with Dictionary argument workflow" sap:VirtualizedContainerService.HintSize="379.42857142857144,113.71428571428571" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UiPath\Invoke VBScript with Dictionary argument.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_inputArguments">
-                      <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_list_tCodeQueryArguments" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_str_vbScriptPath">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_tCodeQueryVBSFilePath" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_inputArguments">[in_list_tCodeQueryArguments]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_str_vbScriptPath">[in_str_tCodeQueryVBSFilePath]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_sapStatus]">
