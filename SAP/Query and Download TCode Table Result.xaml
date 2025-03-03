@@ -141,7 +141,7 @@
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,849.1428571428571" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -167,7 +167,10 @@
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[in_str_tCodeName + &quot;: Download Tcode Data as Spreadsheet done with status: &quot; + str_sapStatus]" />
           </Sequence>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID2" Condition="[str_sapStatus.toLower.Contains(&quot;tranferred&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+            <FlowDecision x:Name="__ReferenceID2" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+              <FlowDecision.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="str_sapStatus.toLower.Contains(&quot;transferred&quot;)" />
+              </FlowDecision.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
