@@ -129,14 +129,14 @@
           <av:Point x:Key="ShapeLocation">261.2130952380952,367.09142857142854</av:Point>
           <av:Size x:Key="ShapeSize">78.85714285714286,86.85714285714286</av:Size>
           <av:PointCollection x:Key="FalseConnector">340.0702380952381,410.52 390.0702380952381,410.52</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">261.2130952380952,410.52 231.2130952380952,410.52 231.2130952380952,411.4171428571428 211.2130952380952,411.4171428571428</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">261.2130952380952,410.52 211.2130952380952,410.5199999999999</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
         <FlowStep x:Name="__ReferenceID9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">11.213095238095207,376.55999999999995</av:Point>
+              <av:Point x:Key="ShapeLocation">11.213095238095207,375.6628571428571</av:Point>
               <av:Size x:Key="ShapeSize">200,69.71428571428571</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
@@ -163,7 +163,7 @@
                 </ui:Target>
               </ucas:ReadStatusbar.Target>
             </ucas:ReadStatusbar>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[in_str_tCodeName + &quot;: Download Tcode Data as Spreadsheet completed&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[in_str_tCodeName + &quot;: Download Tcode Data as Spreadsheet done with status: &quot; + str_sapStatus]" />
           </Sequence>
           <FlowStep.Next>
             <FlowDecision x:Name="__ReferenceID2" Condition="[str_sapStatus.toLower.Contains(&quot;tranferred&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
@@ -172,7 +172,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">71.78452380952378,486.80571428571426</av:Point>
                   <av:Size x:Key="ShapeSize">78.85714285714286,86.85714285714286</av:Size>
-                  <av:PointCollection x:Key="FalseConnector">150.64166666666665,530.2342857142856 180.64166666666665,530.2342857142856 180.64166666666665,530.5714285714287 199.99999999999997,530.5714285714287</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">150.64166666666665,530.2342857142856 200.64166666666665,530.2342857142858</av:PointCollection>
                   <av:PointCollection x:Key="TrueConnector">71.78452380952378,530.2342857142856 41.784523809523776,530.2342857142856 41.784523809523776,573.7142857142857 100,573.7142857142857 100,603.7142857142857</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -208,7 +208,7 @@
                 <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">199.99999999999997,504.28571428571433</av:Point>
+                      <av:Point x:Key="ShapeLocation">200.64166666666665,503.9485714285714</av:Point>
                       <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">300,556.8571428571429 300,586.8571428571429 300.64166666666665,586.8571428571429 300.64166666666665,606.52</av:PointCollection>
                     </scg:Dictionary>
@@ -389,7 +389,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">450.64166666666665,247.07142857142856</av:Point>
               <av:Size x:Key="ShapeSize">78.85714285714286,86.85714285714286</av:Size>
-              <av:PointCollection x:Key="TrueConnector">450.64166666666665,290.5 420.64166666666665,290.5 420.64166666666665,291.3971428571428 400.64166666666665,291.3971428571428</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">450.64166666666665,290.5 400.64166666666665,290.5</av:PointCollection>
               <av:PointCollection x:Key="FalseConnector">529.4988095238095,290.5 579.4988095238095,290.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -397,7 +397,7 @@
             <FlowStep x:Name="__ReferenceID8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200.64166666666665,256.53999999999996</av:Point>
+                  <av:Point x:Key="ShapeLocation">200.64166666666665,255.64285714285714</av:Point>
                   <av:Size x:Key="ShapeSize">200,69.71428571428571</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">300.64166666666665,326.2542857142857 300.64166666666665,367.09142857142854</av:PointCollection>
                 </scg:Dictionary>
@@ -424,7 +424,7 @@
                     </ui:Target>
                   </ucas:ReadStatusbar.Target>
                 </ucas:ReadStatusbar>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[in_str_tCodeName + &quot;: Query TCode Data completed&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.42857142857144,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[in_str_tCodeName + &quot;: Query TCode Data done with status: &quot; + str_sapStatus]" />
               </Sequence>
               <FlowStep.Next>
                 <x:Reference>__ReferenceID5</x:Reference>
