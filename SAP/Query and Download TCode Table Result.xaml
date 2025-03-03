@@ -141,7 +141,7 @@
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,787.4285714285714" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,7 +156,7 @@
             </ui:InvokeWorkflowFile>
             <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageText="[str_sapStatus]">
               <ucas:ReadStatusbar.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' omit:title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -417,7 +417,7 @@
                 </ui:InvokeWorkflowFile>
                 <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_sapStatus]">
                   <ucas:ReadStatusbar.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' omit:title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
