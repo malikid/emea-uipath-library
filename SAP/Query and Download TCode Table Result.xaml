@@ -18,7 +18,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>954.8571428571429,1015.4285714285716</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1496,1015.4285714285716</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Query_and_Download_TCode_Table_Result_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -141,7 +141,7 @@
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,787.4285714285714" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,849.1428571428571" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,6 +154,7 @@
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_vbScriptPath">[in_str_tCodeDownloadVBSFilePath]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
+            <Delay DisplayName="Delay 5 Seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="379.42857142857144,21.714285714285715" sap2010:WorkflowViewState.IdRef="Delay_1" />
             <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageText="[str_sapStatus]">
               <ucas:ReadStatusbar.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="3dc183b75dda336b780ebc584a5764f5" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' omit:title='Table Content YCMRCONS1:        698 of        698 Hits' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
@@ -186,15 +187,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Kill Processes From Current Session workflow" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System\Kill Processes From Current Session.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="s:String[]" x:Key="in_processNamesToKill">
-                        <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;saplgpad&quot;, &quot;EXCEL&quot;}" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_isEnabled">
-                        <Literal x:TypeArguments="x:Boolean" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_shouldContinueOnError">
-                        <Literal x:TypeArguments="x:Boolean" Value="True" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="s:String[]" x:Key="in_processNamesToKill">[{"saplgpad", "EXCEL"}]</InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_isEnabled">False</InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_shouldContinueOnError">True</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -415,6 +410,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_vbScriptPath">[in_str_tCodeQueryVBSFilePath]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
+                <Delay DisplayName="Delay 5 Seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="379.42857142857144,21.714285714285715" sap2010:WorkflowViewState.IdRef="Delay_2" />
                 <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane File'" sap:VirtualizedContainerService.HintSize="379.42857142857144,271.42857142857144" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[str_sapStatus]">
                   <ucas:ReadStatusbar.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1911704-477e-400e-8f9a-c4a35313c966" InformativeScreenshot="8b2c253b5f57de2bcfd274def14a255d" Selector="&lt;wnd app='saplgpad.exe' cls='SAP_FRONTEND_SESSION' omit:title='Data Browser: Table YCMRCONS1: Selection Screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;" WaitForReady="COMPLETE">
