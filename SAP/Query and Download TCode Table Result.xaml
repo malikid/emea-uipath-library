@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Query_and_Download_TCode_Table_Result" this:Query_and_Download_TCode_Table_Result.in_str_sapAppPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplgpad.exe" this:Query_and_Download_TCode_Table_Result.in_bool_continueOnError="True" this:Query_and_Download_TCode_Table_Result.in_list_tCodeQueryArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_list_tCodeDownloadArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForNoData="No data" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForDownloadFailed="Download failed" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForSAPLoginFailed="SAP login failed" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Query_and_Download_TCode_Table_Result" this:Query_and_Download_TCode_Table_Result.in_str_sapAppPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplgpad.exe" this:Query_and_Download_TCode_Table_Result.in_bool_continueOnError="True" this:Query_and_Download_TCode_Table_Result.in_list_tCodeQueryArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_list_tCodeDownloadArguments="[New List(Of String)]" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForNoData="No data" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForDownloadFailed="Download failed" this:Query_and_Download_TCode_Table_Result.in_str_errorMessageForSAPLoginFailed="SAP login failed" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_str_sapAppPath" Type="InArgument(x:String)" />
     <x:Property Name="in_str_sapConnectionName" Type="InArgument(x:String)" />
@@ -18,7 +18,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>954.8571428571429,1011.4285714285716</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>954.8571428571429,1015.4285714285716</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Query_and_Download_TCode_Table_Result_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Query_and_Download_TCode_Table_Result" sap:VirtualizedContainerService.HintSize="964.5714285714286,946.2857142857143" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Query_and_Download_TCode_Table_Result" sap:VirtualizedContainerService.HintSize="964.5714285714286,950.2857142857143" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="[bool_isLoggedInToSapClient]" Name="bool_isLoggedInToSapClient" />
       <Variable x:TypeArguments="x:String" Name="str_sapStatus" />
@@ -115,12 +115,12 @@
         <av:Point x:Key="ShapeLocation">460,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,74.85714285714286</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">490,77.35714285714286 490,127.35714285714286</av:PointCollection>
-        <x:Double x:Key="Height">911.1177142857144</x:Double>
+        <x:Double x:Key="Height">914.8057142857143</x:Double>
         <x:Double x:Key="Width">930</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
     </Flowchart.StartNode>
     <FlowDecision x:Name="__ReferenceID5" Condition="[str_sapStatus.Equals(&quot;&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
@@ -141,7 +141,7 @@
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,787.4285714285714" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,8 +173,37 @@
                   <av:Point x:Key="ShapeLocation">71.78452380952378,486.80571428571426</av:Point>
                   <av:Size x:Key="ShapeSize">78.85714285714286,86.85714285714286</av:Size>
                   <av:PointCollection x:Key="FalseConnector">150.64166666666665,530.2342857142856 180.64166666666665,530.2342857142856 180.64166666666665,530.5714285714287 199.99999999999997,530.5714285714287</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">71.78452380952378,530.2342857142856 41.784523809523776,530.2342857142856 41.784523809523776,573.7142857142857 100,573.7142857142857 100,603.7142857142857</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <FlowDecision.True>
+                <FlowStep x:Name="__ReferenceID12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">0,603.7142857142857</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Kill Processes From Current Session workflow" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System\Kill Processes From Current Session.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="s:String[]" x:Key="in_processNamesToKill">
+                        <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;saplgpad&quot;, &quot;EXCEL&quot;}" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_isEnabled">
+                        <Literal x:TypeArguments="x:Boolean" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_shouldContinueOnError">
+                        <Literal x:TypeArguments="x:Boolean" Value="True" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                </FlowStep>
+              </FlowDecision.True>
               <FlowDecision.False>
                 <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -197,7 +226,7 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">200.64166666666665,606.52</av:Point>
                           <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300.64166666666665,659.0914285714285 300.64166666666665,707.9485714285714</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">300.64166666666665,659.0914285714285 300.64166666666665,709.0914285714285</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="[in_str_tCodeName + &quot;_screenshot.png&quot;]" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" Version="V1">
@@ -211,33 +240,56 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NTakeScreenshot>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID0" Condition="[in_bool_continueOnError]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                        <FlowStep x:Name="__ReferenceID0">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <av:Point x:Key="ShapeLocation">261.2130952380952,707.9485714285714</av:Point>
-                              <av:Size x:Key="ShapeSize">78.85714285714286,86.85714285714286</av:Size>
-                              <av:PointCollection x:Key="FalseConnector">340.0702380952381,751.3771428571429 390.0702380952381,751.3771428571429</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">200.64166666666665,709.0914285714285</av:Point>
+                              <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">300.64166666666665,761.6628571428571 300.64166666666665,811.6628571428571</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <FlowDecision.False>
-                            <FlowStep x:Name="__ReferenceID10">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Kill Processes From Current Session workflow" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="System\Kill Processes From Current Session.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="s:String[]" x:Key="in_processNamesToKill">[{"saplgpad", "EXCEL"}]</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_isEnabled">False</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_shouldContinueOnError">True</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <FlowDecision x:Name="__ReferenceID10" Condition="[in_bool_continueOnError]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.85714285714286,86.85714285714286" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">390.0702380952381,740.52</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,21.714285714285715</av:Size>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <av:Point x:Key="ShapeLocation">261.2130952380952,811.6628571428571</av:Point>
+                                  <av:Size x:Key="ShapeSize">78.85714285714286,86.85714285714286</av:Size>
+                                  <av:PointCollection x:Key="FalseConnector">340.0702380952381,855.0914285714285 390.0702380952381,855.0914285714285</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[New SystemException(&quot;Something went wrong during the attemp to get &quot; + in_str_tCodeName + &quot; data. Please check the log.&quot;)]" sap:VirtualizedContainerService.HintSize="200,21.714285714285715" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </TerminateWorkflow>
-                            </FlowStep>
-                          </FlowDecision.False>
-                        </FlowDecision>
+                              <FlowDecision.False>
+                                <FlowStep x:Name="__ReferenceID11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">390.0702380952381,844.2342857142856</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,21.714285714285715</av:Size>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[New SystemException(&quot;Something went wrong during the attemp to get &quot; + in_str_tCodeName + &quot; data. Please check the log.&quot;)]" sap:VirtualizedContainerService.HintSize="200,21.714285714285715" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </TerminateWorkflow>
+                                </FlowStep>
+                              </FlowDecision.False>
+                            </FlowDecision>
+                          </FlowStep.Next>
+                        </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowStep.Next>
@@ -253,7 +305,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">390.0702380952381,384.2342857142857</av:Point>
               <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">490.0702380952381,436.80571428571426 490.0702380952381,677.9485714285714 300.64166666666665,677.9485714285714 300.64166666666665,707.9485714285714</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">490.0702380952381,436.80571428571426 490.0702380952381,679.0914285714285 300.64166666666665,679.0914285714285 300.64166666666665,709.0914285714285</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[in_str_tCodeName + &quot;: &quot; + in_str_errorMessageForNoData]">
@@ -273,7 +325,7 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
-    <FlowStep x:Name="__ReferenceID11">
+    <FlowStep x:Name="__ReferenceID13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">390,127.35714285714286</av:Point>
@@ -291,13 +343,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client start&quot;]" />
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: SAP Logon Pad 740" sap:VirtualizedContainerService.HintSize="434.2857142857143,599.4285714285714" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="04bcbde7-ed52-4a8a-9e47-a730032f9092" Version="V2">
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: SAP Logon Pad 740" sap:VirtualizedContainerService.HintSize="434.2857142857143,600.5714285714286" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="04bcbde7-ed52-4a8a-9e47-a730032f9092" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376.57142857142856,302.2857142857143" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376.57142857142856,303.42857142857144" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -385,7 +437,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">579.4988095238095,264.2142857142857</av:Point>
                   <av:Size x:Key="ShapeSize">200,52.57142857142857</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">679.4988095238095,316.7857142857143 679.4988095238095,677.9485714285714 300.64166666666665,677.9485714285714 300.64166666666665,707.9485714285714</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">679.4988095238095,316.7857142857143 679.4988095238095,679.0914285714285 300.64166666666665,679.0914285714285 300.64166666666665,709.0914285714285</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.57142857142857" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[in_str_tCodeName + &quot;: &quot; + in_str_errorMessageForSAPLoginFailed]">
@@ -407,7 +459,9 @@
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
   </Flowchart>
 </Activity>
