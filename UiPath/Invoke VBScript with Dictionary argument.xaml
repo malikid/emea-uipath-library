@@ -69,14 +69,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim argumentsString As String = String.Join(&quot; &quot;, list_inputArguments)&#xD;&#xA;Process.Start(&quot;wscript.exe&quot;, str_vbScriptPath &amp; &quot; &quot; &amp; argumentsString)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334.2857142857143,163.42857142857142" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim argumentsString As String = String.Join(&quot; &quot;, list_inputArguments)&#xD;&#xA;Process.Start(&quot;wscript.exe&quot;, &quot;&quot;&quot;&quot; &amp; str_vbScriptPath &amp; &quot;&quot;&quot;&quot; &amp; &quot; &quot; &amp; argumentsString)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334.2857142857143,163.42857142857142" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="list_inputArguments">
-          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_list_inputArguments" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="str_vbScriptPath">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_vbScriptPath" />
-        </InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="list_inputArguments">[in_list_inputArguments]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_vbScriptPath">[in_str_vbScriptPath]</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
   </Sequence>
