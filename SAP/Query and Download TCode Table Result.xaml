@@ -141,7 +141,7 @@
               <av:PointCollection x:Key="ConnectorLocation">111.2130952380952,446.27428571428567 111.2130952380952,486.80571428571426</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="421.7142857142857,787.4285714285714" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Download TCode Data as Spreadsheet" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -333,7 +333,7 @@
           <av:PointCollection x:Key="ConnectorLocation">490,197.07142857142856 490,227.07142857142856 490.0702380952381,227.07142857142856 490.0702380952381,247.07142857142856</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Log in SAP and Client" sap:VirtualizedContainerService.HintSize="200,69.71428571428571" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Log in SAP and Client" sap:VirtualizedContainerService.HintSize="476.57142857142856,962.8571428571429" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="str_isLoggedInToSapClient" />
         </Sequence.Variables>
@@ -343,7 +343,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434.2857142857143,95.42857142857143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[in_str_tCodeName + &quot;: Log in SAP and Client start&quot;]" />
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: SAP Logon Pad 740" sap:VirtualizedContainerService.HintSize="434.2857142857143,600.5714285714286" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="04bcbde7-ed52-4a8a-9e47-a730032f9092" Version="V2">
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SAP Logon Pad 740" sap:VirtualizedContainerService.HintSize="434.2857142857143,600.5714285714286" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="04bcbde7-ed52-4a8a-9e47-a730032f9092" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
