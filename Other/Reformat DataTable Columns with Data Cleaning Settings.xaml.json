@@ -1,0 +1,37 @@
+{
+  "DisplayName": "Reformat DataTable Columns with Data Cleaning Settings",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "IconRelativePath": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_str_templateName",
+      "DisplayName": "in_str_templateName",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "in_dict_configDataCleaningSettings",
+      "DisplayName": "in_dict_configDataCleaningSettings",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "io_dt_outputData",
+      "DisplayName": "io_dt_outputData",
+      "Category": null,
+      "Tooltip": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    }
+  ]
+}
