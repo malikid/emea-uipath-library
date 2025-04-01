@@ -25,8 +25,8 @@
       "IsPrincipal": true
     },
     {
-      "Name": "io_dt_outputData",
-      "DisplayName": "io_dt_outputData",
+      "Name": "io_dt_dataTable",
+      "DisplayName": "io_dt_dataTable",
       "Category": null,
       "Tooltip": null,
       "Widget": null,
